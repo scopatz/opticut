@@ -18,6 +18,7 @@ fn solve() {
     let J = x.len();
     let mut A = Array2::<bool>::from_elem((I, J), false);
     let mut M = Array2::<bool>::from_elem((I, J), false);
+    let mut pieces_known = 0;
     println!("Boards = {}", b);
     println!("Pieces = {}", x);
 }
