@@ -29,7 +29,7 @@ fn solve() {
                 continue;
             }
             A[[i, j]] = 1.0;
-            let usable = A.slice(s![i, ..]).dot(&x) <= b[i];
+            let usable = A.slice(s![i, ..]).dot(&x) + w*(A.row(i).sum() - 1.0) <= b[i];
             A[[i, j]] = if usable { 1.0 } else { 0.0 };
             M[[i, j]] = true;
             if usable {
